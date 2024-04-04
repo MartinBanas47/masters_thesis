@@ -1,0 +1,64 @@
+{
+    "inlining": [
+        {
+            "name": "asdasd2",
+            "object": {
+                "id": "test20",
+                "type": "parentCell",
+                "cell": {
+                    "id": "test23",
+                    "type": "attributeCell",
+                    "expectedValue": "In1",
+                    "attributeName": "Name",
+                    "operation": "=="
+                }
+            }
+        },
+        {
+            "name": "ouyeah",
+            "object": {
+                "id": "test20",
+                "type": "parentCell",
+                "cell": {
+                    "id": "test2",
+                    "type": "attributeCell",
+                    "expectedValue": "In1",
+                    "attributeName": "Name",
+                    "operation": "=="
+                }
+            }
+        }
+    ],
+    "useCases": [
+        {
+            "id": "test4",
+            "type": "orCell",
+            "cells": [
+                {
+                    "id": "test5",
+                    "type": "inliningCell",
+                    "referenceName": "ouyeah"
+                },
+                {
+                    "id": "test5",
+                    "type": "inliningCell",
+                    "referenceName": "ouyeah"
+                },
+                {
+                    "id": "test5",
+                    "type": "inliningCell",
+                    "referenceName": "ouyeah"
+                },
+                {
+                    "id": "test74",
+                    "type": "allParentCell",
+                    "cell": {
+                        "id": "test5",
+                        "type": "inliningCell",
+                        "referenceName": "asdasd2"
+                    }
+                }
+            ]
+        }
+    ]
+}

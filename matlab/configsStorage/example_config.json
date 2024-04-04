@@ -1,0 +1,37 @@
+{
+    "inlining": [
+        {
+            "name": "asdasd2",
+            "object": {
+                "id": "test20",
+                "type": "orCell",
+                "cells": [
+                    {
+                        "id": "test2",
+                        "type": "attributeCell",
+                        "expectedValue": -1,
+                        "attributeName": "fontSize",
+                        "operation": "=="
+                    },
+                    {
+                        "id": "test5",
+                        "type": "functionCell",
+                        "script": "1==2"
+                    }
+                ]
+            }
+        }
+    ],
+    "useCases": [
+        {
+            "id": "ehm",
+            "type": "inliningCell",
+            "referenceName": "testCell2"
+        },
+        {
+            "id": "eno nuno",
+            "type": "functionalPointerCell",
+            "functionName": "returnTrue"
+        }
+    ]
+}

@@ -1,0 +1,204 @@
+{
+    "inlining": [
+        {
+            "name": "CellTest3",
+            "object": {
+                "id": "test14",
+                "type": "AndCell",
+                "Cells": [
+                    {
+                        "id": "test15",
+                        "type": "AttributeCell",
+                        "ExpectedValue": "Subsystem",
+                        "AttributeName": "Name",
+                        "Operation": "=="
+                    },
+                    {
+                        "id": "test16",
+                        "type": "AttributeCell",
+                        "ExpectedValue": "",
+                        "AttributeName": "MaskType",
+                        "Operation": "=="
+                    }
+                ]
+            }
+        },
+        {
+            "name": "test1",
+            "object": {
+                "id": "test18",
+                "type": "AndCell",
+                "Cells": [
+                    {
+                        "id": "test17",
+                        "type": "AttributeCell",
+                        "ExpectedValue": "Subsystem",
+                        "AttributeName": "Name",
+                        "Operation": "=="
+                    },
+                    {
+                        "id": "test19",
+                        "type": "AttributeCell",
+                        "ExpectedValue": "",
+                        "AttributeName": "MaskType",
+                        "Operation": "=="
+                    }
+                ]
+            }
+        },
+        {
+            "name": "testCell2",
+            "object": {
+                "id": "test20",
+                "type": "AndCell",
+                "Cells": [
+                    {
+                        "id": "test21",
+                        "type": "AttributeCell",
+                        "ExpectedValue": "Subsystem",
+                        "AttributeName": "Name",
+                        "Operation": "=="
+                    },
+                    {
+                        "id": "test22",
+                        "type": "AttributeCell",
+                        "ExpectedValue": "",
+                        "AttributeName": "MaskType",
+                        "Operation": "=="
+                    }
+                ]
+            }
+        }
+    ],
+    "useCases": [
+        {
+            "id": "test1",
+            "type": "AndCell",
+            "Cells": [
+                {
+                    "id": "test2",
+                    "type": "FunctionCell",
+                    "script": "1==1"
+                },
+                {
+                    "id": "test3",
+                    "type": "AttributeCell",
+                    "ExpectedValue": "",
+                    "AttributeName": "MaskType",
+                    "Operation": "=="
+                }
+            ]
+        },
+        {
+            "id": "test4",
+            "type": "AndCell",
+            "Cells": [
+                {
+                    "id": "test5",
+                    "type": "AttributeCell",
+                    "ExpectedValue": "Subsystem",
+                    "AttributeName": "Name",
+                    "Operation": "=="
+                },
+                {
+                    "id": "test6",
+                    "type": "AttributeCell",
+                    "ExpectedValue": "",
+                    "AttributeName": "MaskType",
+                    "Operation": "=="
+                }
+            ]
+        },
+        {
+            "id": "test7",
+            "type": "InliningCell",
+            "name": "CellTest3"
+        },
+        {
+            "id": "test8",
+            "type": "OrCell",
+            "Cells": [
+                {
+                    "id": "test9",
+                    "type": "AttributeCell",
+                    "ExpectedValue": "Subsystem",
+                    "AttributeName": "Name",
+                    "Operation": "=="
+                },
+                {
+                    "id": "test10",
+                    "type": "AttributeCell",
+                    "ExpectedValue": "",
+                    "AttributeName": "MaskType",
+                    "Operation": "=="
+                }
+            ]
+        },
+        {
+            "id": "test11",
+            "type": "ParentCell",
+            "Cell": {
+                "id": "test13",
+                "type": "AttributeCell",
+                "ExpectedValue": "Subsystem",
+                "AttributeName": "Name",
+                "Operation": "=="
+            }
+        },
+        {
+            "id": "test12",
+            "type": "NegationCell",
+            "Cell": {
+                "id": "test12",
+                "type": "AttributeCell",
+                "ExpectedValue": "Subsystem",
+                "AttributeName": "Name",
+                "Operation": "=="
+            }
+        },
+        {
+            "id": "test23",
+            "type": "InliningCell",
+            "name": "CellTest3"
+        },
+        {
+            "id": "test24",
+            "type": "NegationCell",
+            "Cell": {
+                "id": "test25",
+                "type":"AndCell",
+                "Cells": [
+                    {
+                        "id": "test26",
+                        "type": "ParentCell",
+                        "Cell": {
+                            "id": "test27",
+                            "type":"AndCell",
+                            "Cells": [
+                                {
+                                    "id": "test28",
+                                    "type":"AttributeCell",
+                                    "ExpectedValue": "Subsystem",
+                                    "AttributeName": "Name",
+                                    "Operation": "=="
+                                    
+                                },
+                                {
+                                    "id": "test29",
+                                    "type":"ParentCell",
+                                    "Cell": {
+                                        "id": "test30",
+                                        "type": "AttributeCell",
+                                        "ExpectedValue": "Subsystem",
+                                        "AttributeName": "Name",
+                                        "Operation": "=="
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
