@@ -25,13 +25,13 @@ classdef AllParentsList < handle & BaseParentList
         function outputArg = getNextParent(obj)
             %GETNEXTPARENT Provides next parent from the list and sets it as removed
             %   Behaviour when NextParentAvailable returns false is undefined
-            if(obj.CurrentEnd == 0)
-                obj.IsEmpty = true;
+            if(obj.CurrentEnd <= 0)
                 outputArg = 0;
                 return;
             end
             outputArg = obj.List(obj.CurrentEnd);
             obj.CurrentEnd = obj.CurrentEnd - 1;
+            obj.IsEmpty = obj.CurrentEnd == 0;
         end
         
         function returnParent(obj)
