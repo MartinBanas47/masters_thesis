@@ -1,4 +1,4 @@
-classdef ParentsList < handle 
+classdef ParentsList < handle
     properties
         List,
         MaxDepth,
@@ -12,8 +12,8 @@ classdef ParentsList < handle
             obj.List = zeros(1, maxDepth);
             obj.MaxDepth = maxDepth;
         end
-
-        function AddParent(obj, value)
+        
+        function addParent(obj, value)
             %ADDPARENT Adds block to a list of parents
             if (obj.MaxDepth == 0)
                 return;
@@ -31,37 +31,37 @@ classdef ParentsList < handle
             end
         end
         
-        function outputArg = NextParentAvailable(obj)
+        function outputArg = nextParentAvailable(obj)
             %NEXTPARENTAVAILABLE Returns if there is next parent available to pick
             outputArg = ~obj.IsEmpty;
         end
-
-        function outputArg = GetNextParent(obj)
+        
+        function outputArg = getNextParent(obj)
             %GETNEXTPARENT Provides next parent from the list and sets it as removed
             %   Behaviour when NextParentAvailable returns false is undefined
             outputArg = obj.List(obj.CurrentEnd);
             if (obj.CurrentEnd == obj.CurrentStart)
-                obj.IsEmpty = true;                
+                obj.IsEmpty = true;
             end
             obj.CurrentEnd = obj.GetPrevIndex(obj.CurrentEnd);
         end
-
-        function ReturnParent(obj)
+        
+        function returnParent(obj)
             %RETURNPARENT Returns lastly taken parent from to list back to the list
             %   Behavior when returning more parents than removed is undefined
             %   Behavior when adding parents before returning all the removed parents is undefined
             obj.CurrentEnd = obj.GetNextIndex(obj.CurrentEnd);
             obj.IsEmpty = false;
         end
-
-       
+        
+        
     end
-
+    
     methods(Access = private)
         function resultIndex = GetNextIndex(obj, index)
             resultIndex =  mod((index), obj.MaxDepth) + 1;
         end
-
+        
         function resultIndex = GetPrevIndex(obj, index)
             if (index == 1)
                 resultIndex = obj.MaxDepth;
@@ -69,6 +69,6 @@ classdef ParentsList < handle
                 resultIndex = index - 1;
             end
         end
-    end 
+    end
 end
 
