@@ -18,10 +18,10 @@ classdef ParentCell < BaseCell
         function outputBool = evaluateCell(obj, block, inliningDef, parents, inliningResults)
             if (parents.nextParentAvailable())
                 outputBool = evaluateCell(obj.Cell, parents.getNextParent(), inliningDef, parents, InliningResultsDictionary());
+                parents.returnParent();
             else
                 outputBool = false;
             end
-            parents.returnParent();
         end
     end
 end
