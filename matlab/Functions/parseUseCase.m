@@ -27,6 +27,9 @@ switch json.type
     case 'functionalPointerCell'
         parentDepth = 0;
         cell = FunctionCell(json.id, json.functionName);
+    case 'attributeTypeCell'
+        parentDepth = 0;
+        cell = AttributeTypeCell(json.id,json.attributeName,json.expectedType);
     otherwise
         error('Unsupported cell type')
 end
