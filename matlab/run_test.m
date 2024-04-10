@@ -1,14 +1,11 @@
 function config = run_test()
 
 
-%model = load_system('const_in_subsystem');
 model = load_system('ParentTest');
 folderPath = "configs";
 parser = JsonUseCasesParser(folderPath);
 [useCases, inlining, maxParentDepth] = parser.ParseConfigs();
 config = ConfigFileRun(useCases, inlining, model, maxParentDepth);
-
-disp("Eval:")
 config.evalUseCasesOnModel();
 
 
