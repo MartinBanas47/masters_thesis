@@ -1,9 +1,9 @@
-classdef StringCompareHelperTest < matlab.unittest.TestCase
+classdef StringComparerTest < matlab.unittest.TestCase
     
     methods (Test)
         
         function testEqualityComparison(testCase)
-            helper = StringCompareHelper("==", "hello");
+            helper = StringComparer("==", "hello");
             
             result = helper.compare("hello");
             
@@ -11,7 +11,7 @@ classdef StringCompareHelperTest < matlab.unittest.TestCase
         end
         
         function testInequalityComparison(testCase)
-            helper = StringCompareHelper("~=", "world");
+            helper = StringComparer("~=", "world");
             
             result = helper.compare("hello");
             
@@ -19,7 +19,7 @@ classdef StringCompareHelperTest < matlab.unittest.TestCase
         end
         
         function testEndOfStringComparison(testCase)
-            helper = StringCompareHelper("end", "world");
+            helper = StringComparer("end", "world");
             
             result = helper.compare("hello world");
             
@@ -27,7 +27,7 @@ classdef StringCompareHelperTest < matlab.unittest.TestCase
         end
         
         function testSubstringContainmentComparison(testCase)
-            helper = StringCompareHelper("in", "world");
+            helper = StringComparer("in", "world");
             
             result = helper.compare("hello world");
             

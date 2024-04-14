@@ -26,10 +26,21 @@ classdef ConfigFileRun < handle
             else
                 parentsList = ParentsList(obj.ParentDepth);
             end
-            evalSubSystemRecursive(obj, system, parentsList);
+            evalSystem(obj, system, parentsList);
             output = true;
         end
     end
+end
+
+function result = evalSystem(obj, system, parents)
+for i = 2:numel(system)
+    evalUseCasesOnBlock(obj, system(i), obj, parents);
+    blockType = get_param(system(i), 'BlockType');
+    if (strcmp(blockType, "SubSystem"))
+        evalSubSystemRecursive(obj, find_system(system(i), 'SearchDepth', 1, 'LookUnderMasks', 'all'), parents);
+    end
+end
+result = true;
 end
 
 

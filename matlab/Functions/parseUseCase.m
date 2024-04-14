@@ -21,12 +21,9 @@ switch json.type
     case 'inliningCell'
         parentDepth = inlining(json.referenceName).ParentDepth;
         cell = InliningCell(json.id,json.referenceName);
-    case 'functionCell'
-        parentDepth = 0;
-        cell = FunctionCell(json.id, json.script);
     case 'functionalPointerCell'
         parentDepth = 0;
-        cell = FunctionCell(json.id, json.functionName);
+        cell = FunctionalPointerCell(json.id, json.functionName, json.arguments);
     case 'attributeTypeCell'
         parentDepth = 0;
         cell = AttributeTypeCell(json.id,json.attributeName,json.expectedType);

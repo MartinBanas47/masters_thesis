@@ -13,10 +13,20 @@ classdef AttributeCell < BaseCell
         function obj = AttributeCell(id,attributeName, expectedValue, operation)
             obj.Id = id;
             obj.AttributeName = attributeName;
-            if (isnumeric(expectedValue))
-                obj.OperationHelper = NumericCompareHelper(operation, expectedValue);
+            if isnumeric(expectedValue) && isscalar(expectedValue)
+                % Input is a single number
+                obj.OperationHelper = NumericComparer(operation, expectedValue);
+            elseif isstring(expectedValue) || ischar(expectedValue)
+                % Input is a string
+                obj.OperationHelper = StringComparer(operation, expectedValue);
+            elseif isnumeric(expectedValue)
+                % Input is a numeric array
+                obj.OperationHelper = NumericArrayComparer(operation, expectedValue);
+            elseif iscell(expectedValue) && (all(cellfun(@isstring, expectedValue)) || all(cellfun(@ischar, expectedValue)))
+                % Input is a string array
+                obj.OperationHelper = StringArrayComparer(operation, expectedValue);
             else
-                obj.OperationHelper = StringCompareHelper(operation, expectedValue);
+                error('Input type not supported');
             end
         end
         

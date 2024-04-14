@@ -1,15 +1,15 @@
-classdef NumericCompareHelper
-    %NUMBERCOMPAREHELPER Summary of this class goes here
+classdef NumericComparer < BaseComparer
+    %NUMERICCOMPARER Summary of this class goes here
     %   Detailed explanation goes here
     
-    properties
+    properties (Access = private)
         Operation,
         ExpectedValue
     end
     
     methods
-        function obj = NumericCompareHelper(operation, expectedValue)
-            %NUMBERCOMPAREHELPER Construct an instance of this class
+        function obj = NumericComparer(operation, expectedValue)
+            %NUMERICCOMPARER Construct an instance of this class
             %   Detailed explanation goes here
             obj.Operation = obj.getNumericOperation(operation);
             obj.ExpectedValue = expectedValue;

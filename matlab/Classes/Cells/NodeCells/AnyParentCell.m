@@ -25,7 +25,7 @@ classdef AnyParentCell < BaseCell
                     return;
                 end
             end
-            for i = 1 : length(size)
+            for i = 1 : size
                 parents.returnParent();
             end
             outputBool = false;

@@ -1,5 +1,5 @@
-classdef StringCompareHelper
-    %STRINGCOMPAREHELPER Helper class for string comparison operations
+classdef StringComparer < BaseComparer
+    %STRINGCOMPARER Helper class for string comparison operations
     %   This class provides methods for comparing strings based on different
     %   operations such as equality, inequality, end-of-string comparison,
     %   and substring containment.
@@ -13,10 +13,10 @@ classdef StringCompareHelper
     end
     
     methods
-        function obj = StringCompareHelper(operation, expectedValue)
-            %STRINGCOMPAREHELPER Construct an instance of the StringCompareHelper class
-            %   obj = StringCompareHelper(operation, expectedValue) creates a new
-            %   instance of the StringCompareHelper class with the specified
+        function obj = StringComparer(operation, expectedValue)
+            %STRINGCOMPARER Construct an instance of the StringComparer class
+            %   obj = StringComparer(operation, expectedValue) creates a new
+            %   instance of the StringComparer class with the specified
             %   operation and expected value.
             
             obj.ExpectedValue = expectedValue;
@@ -27,7 +27,7 @@ classdef StringCompareHelper
             %COMPARE Compare the specified value with the expected value
             %   result = compare(value) compares the specified value with the
             %   expected value using the operation defined for this instance of
-            %   StringCompareHelper.
+            %   StringComparer.
             
             result = obj.Operation(value);
         end
