@@ -62,7 +62,7 @@ inliningResultsDictionary = InliningResultsDictionary();
 for i = 1:numel(obj.UseCases)
     result = obj.UseCases{i}.evaluateCell(block, obj.Inlining, parents, inliningResultsDictionary);
     if (result)
-        structToInput = struct("BlockName",get_param(block, "Name"), "UseCaseId",obj.UseCases{i}.Id);
+        structToInput = struct("BlockName", getfullname(block), "UseCaseId",obj.UseCases{i}.Id);
         configFileRun.Output{end + 1} = structToInput;
     end
 end
