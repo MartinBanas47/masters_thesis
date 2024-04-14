@@ -8,7 +8,7 @@
                 {
                     "id": "const_under_check_const",
                     "type": "attributeCell",
-                    "attributeName": "Type",
+                    "attributeName": "BlockType",
                     "operation": "==",
                     "expectedValue": "Constant"
                 },
@@ -22,9 +22,9 @@
                             {
                                 "id": "const_under_parent_check_sub",
                                 "type": "attributeCell",
-                                "attributeName": "Type",
+                                "attributeName": "BlockType",
                                 "operation": "==",
-                                "expectedValue": "Subsystem"
+                                "expectedValue": "SubSystem"
                             },
                             {
                                 "id": "const_under_parent_check_value",
@@ -43,30 +43,14 @@
             "type": "andCell",
             "cells": [
                 {
-                    "id": "lookup_script_names",
-                    "type": "orCell",
-                    "cells": [
-                        {
-                            "id": "lookup_script_names_type1",
-                            "type": "attributeCell",
-                            "attributeName": "Type",
-                            "operation": "==",
-                            "expectedValue": "Type1"
-                        },
-                        {
-                            "id": "lookup_script_names_type2",
-                            "type": "attributeCell",
-                            "attributeName": "Type",
-                            "operation": "in",
-                            "expectedValue": "Type2"
-                        },
-                        {
-                            "id": "lookup_script_names_type3",
-                            "type": "attributeCell",
-                            "attributeName": "Type",
-                            "operation": "==",
-                            "expectedValue": "Type3"
-                        }
+                    "id": "lookup_script_names_type1",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "in",
+                    "expectedValue": [
+                        "Type1",
+                        "Type2",
+                        "Type3"
                     ]
                 },
                 {
