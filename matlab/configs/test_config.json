@@ -8,9 +8,9 @@
                 {
                     "id": "const_under_check_const",
                     "type": "attributeCell",
-                    "attributeName": "BlockType",
+                    "attributeName": "BlockType1",
                     "operation": "==",
-                    "expectedValue": "Constant"
+                    "expectedValue": "Constant1"
                 },
                 {
                     "id": "const_under_parent",
@@ -22,16 +22,16 @@
                             {
                                 "id": "const_under_parent_check_sub",
                                 "type": "attributeCell",
-                                "attributeName": "BlockType",
+                                "attributeName": "BlockType2",
                                 "operation": "==",
-                                "expectedValue": "SubSystem"
+                                "expectedValue": "SubSystem2"
                             },
                             {
                                 "id": "const_under_parent_check_value",
                                 "type": "attributeCell",
-                                "attributeName": "Value",
+                                "attributeName": "Value3",
                                 "operation": "==",
-                                "expectedValue": "!!!!!!!!!!!!"
+                                "expectedValue": "ValueToReplace3"
                             }
                         ]
                     }
@@ -45,7 +45,7 @@
                 {
                     "id": "lookup_script_names_type1",
                     "type": "attributeCell",
-                    "attributeName": "BlockType",
+                    "attributeName": "BlockType4",
                     "operation": "in",
                     "expectedValue": [
                         "Type1",
@@ -61,15 +61,15 @@
                             "id": "lookup_script_script_name",
                             "type": "attributeCell",
                             "operation": "in",
-                            "attributeName": "Name",
-                            "expectedValue": "Table"
+                            "attributeName": "Name5",
+                            "expectedValue": "Table5"
                         },
                         {
                             "id": "lookup_script_script_val",
                             "type": "attributeCell",
-                            "attributeName": "Value",
+                            "attributeName": "Value6",
                             "operation": "end",
-                            "expectedValue": ".m"
+                            "expectedValue": ".m6"
                         }
                     ]
                 }
@@ -81,8 +81,8 @@
             "cell": {
                 "id": "NotNumericConstantTypeValue",
                 "type": "attributeTypeCell",
-                "attributeName": "Name",
-                "expectedType": "char"
+                "attributeName": "Value7",
+                "expectedType": "char7"
             }
         }
     ]
