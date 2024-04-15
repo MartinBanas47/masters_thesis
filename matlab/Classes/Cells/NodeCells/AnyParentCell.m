@@ -17,18 +17,17 @@ classdef AnyParentCell < BaseCell
         
         function outputBool = evaluateCell(obj, block, inliningDef, parents, inliningResults)
             size = parents.size();
+            outputBool = false;
             for i = 1 : size
                 parent = parents.getNextParent();
                 res = obj.Cell.evaluateCell(parent, inliningDef, parents, InliningResultsDictionary());
                 if (res)
                     outputBool = true;
-                    return;
                 end
             end
             for i = 1 : size
                 parents.returnParent();
             end
-            outputBool = false;
         end
     end
 end
