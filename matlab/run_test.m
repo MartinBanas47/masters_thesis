@@ -1,5 +1,9 @@
 function config = run_test()
 
+addpath(genpath('Classes'));
+addpath(genpath('configs'));
+addpath(genpath('Functions'));
+addpath(genpath('Test'));
 
 model = load_system('ParentTest');
 folderPath = "configs";
