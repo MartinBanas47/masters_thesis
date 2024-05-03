@@ -30,9 +30,13 @@ classdef AttributeCell < BaseCell
             end
         end
         
-        function r = evaluateCell(obj,block, inliningDef, parents, inliningResults)
-            param = get_param(block, obj.AttributeName);
-            r = obj.OperationHelper.compare(param);
+        function r = evaluateCell(obj,block, inliningDef,parents, inliningResults)
+            try
+                param = get_param(block, obj.AttributeName);
+                r = obj.OperationHelper.compare(param);
+            catch
+                r= false;
+            end
         end
     end
 end
