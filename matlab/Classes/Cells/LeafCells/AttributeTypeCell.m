@@ -21,7 +21,7 @@ classdef AttributeTypeCell < BaseCell
                 param = get_param(block, obj.AttributeName);
                 r = isa(param, obj.ExpectedAttributeType);
             catch
-                r = false
+                r = false;
             end
         end
     end

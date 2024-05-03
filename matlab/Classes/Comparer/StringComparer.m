@@ -59,7 +59,7 @@ classdef StringComparer < BaseComparer
                 case("~=")
                     result = @(value) ~obj.typeCompare(value, @strcmp);
                 case("end")
-                    result = @(value) obj.typeCompare(value, @endOfStringCompare);
+                    result = @(value) endOfStringCompare(value, obj.ExpectedValue);
                 case("in")
                     result = @(value) obj.typeCompare(value, @contains);
             end

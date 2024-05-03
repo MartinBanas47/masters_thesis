@@ -8,9 +8,16 @@
                 {
                     "id": "const_under_check_const",
                     "type": "attributeCell",
-                    "attributeName": "BlockType1",
+                    "attributeName": "BlockType",
                     "operation": "==",
-                    "expectedValue": "Constant1"
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "const_under_parent_check_value",
+                    "type": "attributeCell",
+                    "attributeName": "Value",
+                    "operation": "==",
+                    "expectedValue": "179.999893"
                 },
                 {
                     "id": "const_under_parent",
@@ -22,16 +29,9 @@
                             {
                                 "id": "const_under_parent_check_sub",
                                 "type": "attributeCell",
-                                "attributeName": "BlockType2",
+                                "attributeName": "BlockType",
                                 "operation": "==",
-                                "expectedValue": "SubSystem2"
-                            },
-                            {
-                                "id": "const_under_parent_check_value",
-                                "type": "attributeCell",
-                                "attributeName": "Value3",
-                                "operation": "==",
-                                "expectedValue": "ValueToReplace3"
+                                "expectedValue": "SubSystem"
                             }
                         ]
                     }
@@ -45,33 +45,38 @@
                 {
                     "id": "lookup_script_names_type1",
                     "type": "attributeCell",
-                    "attributeName": "BlockType4",
+                    "attributeName": "BlockType",
                     "operation": "in",
                     "expectedValue": [
                         "Type1",
                         "Type2",
-                        "Type3"
+                        "Constant",
+                        "asdasd"
                     ]
                 },
                 {
                     "id": "lookup_script_script",
-                    "type": "andCell",
-                    "cells": [
-                        {
-                            "id": "lookup_script_script_name",
-                            "type": "attributeCell",
-                            "operation": "in",
-                            "attributeName": "Name5",
-                            "expectedValue": "Table5"
-                        },
-                        {
-                            "id": "lookup_script_script_val",
-                            "type": "attributeCell",
-                            "attributeName": "Value6",
-                            "operation": "end",
-                            "expectedValue": ".m6"
-                        }
-                    ]
+                    "type": "parentCell",
+                    "cell": {
+                        "id": "lookup_script_script",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "lookup_script_script_name",
+                                "type": "attributeCell",
+                                "operation": "==",
+                                "attributeName": "BlockType",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "lookup_script_script_val",
+                                "type": "attributeCell",
+                                "attributeName": "Name",
+                                "operation": "end",
+                                "expectedValue": "xx"
+                            }
+                        ]
+                    }
                 }
             ]
         },
