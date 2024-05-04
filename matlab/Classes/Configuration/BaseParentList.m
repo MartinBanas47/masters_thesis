@@ -1,4 +1,4 @@
-classdef (Abstract) BaseParentList < handle
+classdef (Abstract) BaseParentList < handle & matlab.mixin.Copyable
     methods(Abstract)
         addParent(obj, value)
         outputArg = nextParentAvailable(obj)

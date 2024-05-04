@@ -1,4 +1,4 @@
-classdef ParentsList < handle
+classdef ParentsList < handle & BaseParentList & matlab.mixin.Copyable
     properties
         List,
         MaxDepth,
@@ -54,7 +54,13 @@ classdef ParentsList < handle
             obj.IsEmpty = false;
         end
         
-        
+        function size = size(obj)
+            if (obj.IsEmpty)
+                size = 0;
+                return;
+            end
+            size = length(obj.List);
+        end
     end
     
     methods(Access = private)

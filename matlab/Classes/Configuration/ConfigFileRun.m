@@ -50,7 +50,7 @@ for i = 2:numel(subsystem)
     evalUseCasesOnBlock(obj, subsystem(i), obj, parents);
     blockType = get_param(subsystem(i), 'BlockType');
     if (strcmp(blockType, "SubSystem"))
-        evalSubSystemRecursive(obj, find_system(subsystem(i), 'SearchDepth', 1, 'LookUnderMasks', 'all',  'FollowLinks', 'on'), parents);
+        evalSubSystemRecursive(obj, find_system(subsystem(i), 'SearchDepth', 1, 'LookUnderMasks', 'all',  'FollowLinks', 'on'), copy(parents));
     end
 end
 result = true;

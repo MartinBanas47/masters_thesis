@@ -1,4 +1,4 @@
-classdef AllParentsList < handle & BaseParentList
+classdef AllParentsList < handle & BaseParentList & matlab.mixin.Copyable
     properties
         List,
         CurrentStart = 1,
