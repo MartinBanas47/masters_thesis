@@ -13,9 +13,9 @@ config = ConfigFileRun(useCases, inlining, model, maxParentDepth);
 config.evalUseCasesOnModel();
 
 
-printer = UseCasesOutputPrinter(config.Output);
-printer.PrintJsonToConsole();
-printer.PrintJsonToFile("test.json");
+printer = JsonUseCasesOutputPrinter(config.Output);
+printer.printToConsole();
+printer.printToFile("test.json");
 end
 
 
