@@ -1,0 +1,15 @@
+{
+    "inlining": [],
+    "useCases": [
+        {
+            "id": "NotNumericConstant",
+            "type": "allParentCell",
+            "cell": {
+                "id": "NotNumericConstantTypeValue",
+                "type": "attributeTypeCell",
+                "attributeName": "Value",
+                "expectedType": "char"
+            }
+        }
+    ]
+}

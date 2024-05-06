@@ -48,10 +48,9 @@
                     "attributeName": "BlockType",
                     "operation": "in",
                     "expectedValue": [
-                        "Type1",
-                        "Type2",
-                        "Constant",
-                        "asdasd"
+                        "TableType_1",
+                        "TTableType_2",
+                        "TableType_3"
                     ]
                 },
                 {

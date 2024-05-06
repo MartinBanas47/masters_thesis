@@ -1,0 +1,42 @@
+{
+    "inlining": [],
+    "useCases": [
+        {
+            "id": "const_under",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "const_under_check_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "const_under_parent_check_value",
+                    "type": "attributeCell",
+                    "attributeName": "Value",
+                    "operation": "==",
+                    "expectedValue": "179.999893"
+                },
+                {
+                    "id": "const_under_parent",
+                    "type": "parentCell",
+                    "cell": {
+                        "id": "const_under_parent",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "const_under_parent_check_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
