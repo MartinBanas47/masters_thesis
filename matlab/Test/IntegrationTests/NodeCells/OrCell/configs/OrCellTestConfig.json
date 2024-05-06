@@ -1,0 +1,66 @@
+{
+    "inlining": [],
+    "useCases": [
+        {
+            "id": "OrCellTestFalse",
+            "type": "orCell",
+            "cells": [
+                {
+                    "id": "AttributeCellTestFalse",
+                    "type": "attributeCell",
+                    "attributeName": "Name",
+                    "operation": "==",
+                    "expectedValue": "AttributeCellTestFalse"
+                },
+                {
+                    "id": "AttributeCellTestFalse",
+                    "type": "attributeCell",
+                    "attributeName": "Name",
+                    "operation": "==",
+                    "expectedValue": "AttributeCellTestFalse"
+                },
+                {
+                    "id": "AttributeCellTestFalse",
+                    "type": "attributeCell",
+                    "attributeName": "Name",
+                    "operation": "==",
+                    "expectedValue": "AttributeCellTestFalse"
+                }
+            ]
+        },
+        {
+            "id": "OrCellTestTrue",
+            "type": "orCell",
+            "cells": [
+                {
+                    "id": "AttributeCellTestTrue",
+                    "type": "attributeCell",
+                    "attributeName": "Name",
+                    "operation": "==",
+                    "expectedValue": "AttributeCellTestTrue"
+                },
+                {
+                    "id": "AttributeCellTestTrue",
+                    "type": "attributeCell",
+                    "attributeName": "Name",
+                    "operation": "==",
+                    "expectedValue": "AttributeCellTestTrue"
+                },
+                {
+                    "id": "AttributeCellTestFalse",
+                    "type": "attributeCell",
+                    "attributeName": "Name",
+                    "operation": "==",
+                    "expectedValue": "AttributeCellTestFalse"
+                },
+                {
+                    "id": "AttributeCellTestTrue",
+                    "type": "attributeCell",
+                    "attributeName": "Name",
+                    "operation": "==",
+                    "expectedValue": "AttributeCellTestTrue"
+                }
+            ]
+        }
+    ]
+}

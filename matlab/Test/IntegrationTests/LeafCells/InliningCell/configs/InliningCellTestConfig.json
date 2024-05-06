@@ -1,0 +1,36 @@
+{
+    "inlining": [
+        {
+            "name": "InliningTrue",
+            "object": {
+                "id": "AttributeCellTestTrue",
+                "type": "attributeCell",
+                "attributeName": "Name",
+                "operation": "==",
+                "expectedValue": "AttributeCellTestTrue"
+            }
+        },
+        {
+            "name": "InliningFalse",
+            "object": {
+                "id": "AttributeCellTestFalse",
+                "type": "attributeCell",
+                "attributeName": "Name",
+                "operation": "==",
+                "expectedValue": "AttributeCellTestFalse"
+            }
+        }
+    ],
+    "useCases": [
+        {
+            "id": "InliningTestTrue",
+            "referenceName": "InliningTrue",
+            "type": "inliningCell"
+        },
+        {
+            "id": "InliningTestFalse",
+            "referenceName": "InliningFalse",
+            "type": "inliningCell"
+        }
+    ]
+}

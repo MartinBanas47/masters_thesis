@@ -1,0 +1,87 @@
+{
+    "inlining": [],
+    "useCases": [
+        {
+            "id": "parentCellTestTrue",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "AttributeCellTestTrue",
+                    "type": "attributeCell",
+                    "attributeName": "Name",
+                    "operation": "==",
+                    "expectedValue": "AttributeCellTestTrue"
+                },
+                {
+                    "id": "parentCellTest",
+                    "type": "parentCell",
+                    "cell": {
+                        "id": "netedParent",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "parentCellSubsystemCheck",
+                                "type": "attributeCell",
+                                "attributeName": "Name",
+                                "operation": "==",
+                                "expectedValue": "False84"
+                            },
+                            {
+                                "id": "nestedparent2",
+                                "type": "parentCell",
+                                "cell": {
+                                    "id": "grandparentNameCheck",
+                                    "type": "attributeCell",
+                                    "attributeName": "Name",
+                                    "operation": "==",
+                                    "expectedValue": "False6"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "parentCellTestFalse",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "AttributeCellTestTrue",
+                    "type": "attributeCell",
+                    "attributeName": "Name",
+                    "operation": "==",
+                    "expectedValue": "AttributeCellTestTrue"
+                },
+                {
+                    "id": "parentCellTest",
+                    "type": "parentCell",
+                    "cell": {
+                        "id": "netedParent",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "parentCellSubsystemCheck",
+                                "type": "attributeCell",
+                                "attributeName": "Name",
+                                "operation": "==",
+                                "expectedValue": "False84"
+                            },
+                            {
+                                "id": "nestedparent2",
+                                "type": "parentCell",
+                                "cell": {
+                                    "id": "grandparentNameCheck",
+                                    "type": "attributeCell",
+                                    "attributeName": "Name",
+                                    "operation": "==",
+                                    "expectedValue": "False84"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

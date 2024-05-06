@@ -1,0 +1,19 @@
+{
+    "inlining": [],
+    "useCases": [
+        {
+            "id": "AttributeCellTestTrue",
+            "type": "attributeCell",
+            "attributeName": "Name",
+            "operation": "==",
+            "expectedValue": "AttributeCellTestTrue"
+        },
+        {
+            "id": "AttributeCellTestFalse",
+            "type": "attributeCell",
+            "attributeName": "Name",
+            "operation": "==",
+            "expectedValue": "AttributeCellTestFalse"
+        }
+    ]
+}

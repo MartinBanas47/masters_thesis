@@ -1,0 +1,20 @@
+{
+    "inlining": [],
+    "useCases": [
+        {
+            "id": "NegationCellTestTrue",
+            "type": "negationCell",
+            "cell": {
+                "id": "NegationCellTestPartial",
+                "type": "negationCell",
+                "cell": {
+                    "id": "AttributeCellTestTrue",
+                    "type": "attributeCell",
+                    "attributeName": "Name",
+                    "operation": "==",
+                    "expectedValue": "AttributeCellTestTrue"
+                }
+            }
+        }
+    ]
+}

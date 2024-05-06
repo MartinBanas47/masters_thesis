@@ -1,0 +1,45 @@
+{
+    "inlining": [],
+    "useCases": [
+        {
+            "id": "AttributeTypeAndCellTestTrue",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "AttributeCellTestTrue",
+                    "type": "attributeCell",
+                    "attributeName": "Name",
+                    "operation": "==",
+                    "expectedValue": "AttributeCellTestTrue"
+                },
+                {
+                    "id": "AttributeCellTestTrue",
+                    "type": "attributeCell",
+                    "attributeName": "Name",
+                    "operation": "==",
+                    "expectedValue": "AttributeCellTestTrue"
+                }
+            ]
+        },
+        {
+            "id": "AndCellTestFalse",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "AttributeCellTestTrue",
+                    "type": "attributeCell",
+                    "attributeName": "Name",
+                    "operation": "==",
+                    "expectedValue": "AttributeCellTestTrue"
+                },
+                {
+                    "id": "AttributeTypeCellTestFalse",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Name",
+                    "operation": "==",
+                    "expectedType": "double"
+                }
+            ]
+        }
+    ]
+}
