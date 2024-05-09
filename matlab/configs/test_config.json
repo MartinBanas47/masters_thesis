@@ -75,13 +75,96 @@
         },
         {
             "id": "NotNumericConstant",
-            "type": "allParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "const_under_check_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "NotNumericConstantParent1",
+                    "type": "parentCell",
+                    "cell": {
+                        "id": "NotNumericConstantParentsCheck",
+                        "type": "orCell",
+                        "cells": [
+                            {
+                                "id": "NotNumericConstantTypeValue",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "char"
+                            },
+                            {
+                                "id": "NotNumericConstantParent1",
+                                "type": "parentCell",
+                                "cell": {
+                                    "id": "NotNumericConstantParentsCheck",
+                                    "type": "orCell",
+                                    "cells": [
+                                        {
+                                            "id": "NotNumericConstantTypeValue",
+                                            "type": "attributeTypeCell",
+                                            "attributeName": "Value",
+                                            "expectedType": "char"
+                                        },
+                                        {
+                                            "id": "NotNumericConstantParent1",
+                                            "type": "parentCell",
+                                            "cell": {
+                                                "id": "NotNumericConstantParentsCheck",
+                                                "type": "orCell",
+                                                "cells": [
+                                                    {
+                                                        "id": "NotNumericConstantTypeValue",
+                                                        "type": "attributeTypeCell",
+                                                        "attributeName": "Value",
+                                                        "expectedType": "char"
+                                                    },
+                                                    {
+                                                        "id": "NotNumericConstantParent1",
+                                                        "type": "parentCell",
+                                                        "cell": {
+                                                            "id": "NotNumericConstantParentsCheck",
+                                                            "type": "orCell",
+                                                            "cells": [
+                                                                {
+                                                                    "id": "NotNumericConstantTypeValue",
+                                                                    "type": "attributeTypeCell",
+                                                                    "attributeName": "Value",
+                                                                    "expectedType": "char"
+                                                                },
+                                                                {
+                                                                    "id": "NotNumericConstantParent1",
+                                                                    "type": "parentCell",
+                                                                    "cell": {
+                                                                        "id": "NotNumericConstantParentsCheck",
+                                                                        "type": "orCell",
+                                                                        "cells": [
+                                                                            {
+                                                                                "id": "NotNumericConstantTypeValue",
+                                                                                "type": "attributeTypeCell",
+                                                                                "attributeName": "Value",
+                                                                                "expectedType": "char"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     ]
 }
