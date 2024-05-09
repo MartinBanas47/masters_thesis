@@ -20,7 +20,7 @@ classdef ConfigFileRun < handle
             obj.ParentDepth = maxParentDepth;
         end
         function output = evalUseCasesOnModel(obj)
-            system = find_system(obj.SimulinkModel, 'SearchDepth', 1, 'LookUnderMasks', 'all','FollowLinks', 'on');
+            system = find_system(obj.SimulinkModel, 'SearchDepth', 1, 'LookUnderMasks', 'all','FollowLinks', 'on', 'Type', 'Block');
             if (obj.ParentDepth < 0)
                 parentsList = AllParentsList();
             else
@@ -37,7 +37,7 @@ for i = 2:numel(system)
     evalUseCasesOnBlock(obj, system(i), obj, parents);
     blockType = get_param(system(i), 'BlockType');
     if (strcmp(blockType, "SubSystem"))
-        evalSubSystemRecursive(obj, find_system(system(i), 'SearchDepth', 1, 'LookUnderMasks', 'all',  'FollowLinks', 'on'), parents);
+        evalSubSystemRecursive(obj, find_system(system(i), 'SearchDepth', 1, 'LookUnderMasks', 'all',  'FollowLinks', 'on','Type', 'Block'), parents);
     end
 end
 result = true;
@@ -50,7 +50,7 @@ for i = 2:numel(subsystem)
     evalUseCasesOnBlock(obj, subsystem(i), obj, parents);
     blockType = get_param(subsystem(i), 'BlockType');
     if (strcmp(blockType, "SubSystem"))
-        evalSubSystemRecursive(obj, find_system(subsystem(i), 'SearchDepth', 1, 'LookUnderMasks', 'all',  'FollowLinks', 'on'), copy(parents));
+        evalSubSystemRecursive(obj, find_system(subsystem(i), 'SearchDepth', 1, 'LookUnderMasks', 'all',  'FollowLinks', 'on', 'Type', 'Block'), copy(parents));
     end
 end
 result = true;
