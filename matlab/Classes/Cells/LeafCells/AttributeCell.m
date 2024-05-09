@@ -31,11 +31,11 @@ classdef AttributeCell < BaseCell
         end
         
         function r = evaluateCell(obj,block, inliningDef,parents, inliningResults)
-            try
+            if (isprop(block, obj.AttributeName))
                 param = get_param(block, obj.AttributeName);
                 r = obj.OperationHelper.compare(param);
-            catch
-                r= false;
+            else
+                r = false;
             end
         end
     end
