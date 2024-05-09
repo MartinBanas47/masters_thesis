@@ -18,15 +18,7 @@ classdef NumericComparer < BaseComparer
         function result = compare(obj,value)
             %METHOD1 Summary of this method goes here
             %   Detailed explanation goes here
-            if (~isnumeric(value))
-                try
-                    result = obj.Operation(value, eval(value));
-                catch Ex
-                    rethrow(Ex);
-                end
-            else
-                result = obj.Operation(value, obj.ExpectedValue);
-            end
+            result = obj.Operation(value, obj.ExpectedValue);
         end
     end
     
