@@ -17,10 +17,10 @@ classdef AttributeTypeCell < BaseCell
         end
         
         function r = evaluateCell(obj,block, inliningDef, parents, inliningResults)
-            try
+            if(isprop(block, obj.AttributeName))
                 param = get_param(block, obj.AttributeName);
                 r = isa(param, obj.ExpectedAttributeType);
-            catch
+            else
                 r = false;
             end
         end
