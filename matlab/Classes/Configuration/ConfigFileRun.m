@@ -19,52 +19,9 @@ classdef ConfigFileRun < handle
             obj.Inlining = inlining;
             obj.ParentDepth = maxParentDepth;
         end
-        function output = evalUseCasesOnModel(obj)
-            system = find_system(obj.SimulinkModel, 'SearchDepth', 1, 'LookUnderMasks', 'all','FollowLinks', 'on', 'Type', 'Block');
-            if (obj.ParentDepth < 0)
-                parentsList = AllParentsList();
-            else
-                parentsList = ParentsList(obj.ParentDepth);
-            end
-            evalSystem(obj, system, parentsList);
-            output = true;
+        function evalUseCasesOnModel(obj)
+            evalConfigFileRun(obj);
         end
     end
 end
 
-function result = evalSystem(obj, system, parents)
-for i = 2:numel(system)
-    evalUseCasesOnBlock(obj, system(i), obj, parents);
-    blockType = get_param(system(i), 'BlockType');
-    if (strcmp(blockType, "SubSystem"))
-        evalSubSystemRecursive(obj, find_system(system(i), 'SearchDepth', 1, 'LookUnderMasks', 'all',  'FollowLinks', 'on','Type', 'Block'), parents);
-    end
-end
-result = true;
-end
-
-
-function result = evalSubSystemRecursive(obj, subsystem, parents)
-parents.addParent(subsystem(1))
-for i = 2:numel(subsystem)
-    evalUseCasesOnBlock(obj, subsystem(i), obj, parents);
-    blockType = get_param(subsystem(i), 'BlockType');
-    if (strcmp(blockType, "SubSystem"))
-        evalSubSystemRecursive(obj, find_system(subsystem(i), 'SearchDepth', 1, 'LookUnderMasks', 'all',  'FollowLinks', 'on', 'Type', 'Block'), copy(parents));
-    end
-end
-result = true;
-end
-
-
-function result = evalUseCasesOnBlock(obj, block,configFileRun, parents)
-inliningResultsDictionary = InliningResultsDictionary();
-for i = 1:numel(obj.UseCases)
-    result = obj.UseCases{i}.evaluateCell(block, obj.Inlining, parents, inliningResultsDictionary);
-    if (result)
-        structToInput = struct("BlockName", getfullname(block), "UseCaseId",obj.UseCases{i}.Id);
-        configFileRun.Output{end + 1} = structToInput;
-    end
-end
-result = true;
-end
