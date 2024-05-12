@@ -1,6 +1,6 @@
-classdef (Abstract) BaseUseCasesOutputPrinter
-    methods (Abstract)
-        printToFile(obj, data, filePath)
-        printToConsole(obj, data)
+classdef BaseUseCasesOutputPrinter
+    methods (Abstract, Static)
+        printToFile(data, filePath)
+        printToConsole(data)
     end
 end
