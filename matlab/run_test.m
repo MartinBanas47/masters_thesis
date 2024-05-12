@@ -5,15 +5,30 @@ addpath(genpath('configs'));
 addpath(genpath('Functions'));
 addpath(genpath('Test'));
 
+%evalin('base', 'global memHitCnt;');
+%memHitCnt = 0;
+
+%evalin('base', 'global memMaxVal;');
+%memMaxVal = 0;
+
+
+global memHitCnt;
+memHitCnt = 0;
+
+global memMaxVal;
+memMaxVal = 0;
+
+[~, memAtStart] = tryMemoryScan(0, 0);
+
+%model = load_system('model1');
 model = load_system('ParentTest');
-t1 = datetime;
 folderPath = "configs";
 parser = JsonUseCasesParser(folderPath);
 [useCases, inlining, maxParentDepth] = parser.ParseConfigs();
 config = ConfigFileRun(useCases, inlining, model, maxParentDepth);
 config.evalUseCasesOnModel();
 JsonUseCasesOutputPrinter.printToFile(config.Output, "test.json");
-t2 = datetime;
-dif = milliseconds(t2-t1);
-fprintf('Time: %0.6e', dif);
+
+fprintf("number of evaluated cells: %d\nmemory at start: %d\nmaximum memory allocation: %d\n" + ...
+  "calculated memory: %d\n", memHitCnt, memAtStart, memMaxVal, (memMaxVal - memAtStart));
 end

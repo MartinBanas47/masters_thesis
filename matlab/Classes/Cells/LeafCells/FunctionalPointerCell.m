@@ -17,7 +17,11 @@ classdef FunctionalPointerCell < BaseCell
         end
         
         function result = evaluateCell(obj, block, inliningDef, parents, inliningResults)
+            global memHitCnt;
+            global memMaxVal;
+
             result = feval(obj.FunctionName, obj.Arguments{:});
+            [memHitCnt, memMaxVal] = tryMemoryScan(memHitCnt, memMaxVal);
         end
     end
 end

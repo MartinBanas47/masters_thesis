@@ -31,12 +31,19 @@ classdef AttributeCell < BaseCell
         end
         
         function r = evaluateCell(obj,block, inliningDef,parents, inliningResults)
+            evalin('base', 'global memHitCnt;');
+            evalin('base', 'global memMaxVal;');
+            global memHitCnt;
+            global memMaxVal;
+
             if (isprop(block, obj.AttributeName))
                 param = get_param(block, obj.AttributeName);
                 r = obj.OperationHelper.compare(param);
+                [memHitCnt, memMaxVal] = tryMemoryScan(memHitCnt, memMaxVal);
             else
                 r = false;
             end
+            [memHitCnt, memMaxVal] = tryMemoryScan(memHitCnt, memMaxVal);
         end
     end
 end

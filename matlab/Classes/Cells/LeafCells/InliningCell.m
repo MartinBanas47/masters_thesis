@@ -19,6 +19,11 @@ classdef InliningCell < BaseCell
         
         function outputBool  = evaluateCell(obj,block, inliningDef, parents, inliningResults)
             %METHOD1 Evaluation of the predefined structure which is returned as a result of this cell
+
+            global memHitCnt;
+            global memMaxVal;
+
+
             if (inliningResults.IsKey(obj.ReferenceName))
                 outputBool  = inliningResults.Get(obj.ReferenceName);
             else
@@ -26,6 +31,7 @@ classdef InliningCell < BaseCell
                 inliningResults.Add(obj.ReferenceName, value);
                 outputBool = value;
             end
+            [memHitCnt, memMaxVal] = tryMemoryScan(memHitCnt, memMaxVal);
         end
     end
 end
