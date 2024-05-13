@@ -22,7 +22,11 @@ classdef AnyParentCell < BaseCell
                 parent = parents.getNextParent();
                 res = obj.Cell.evaluateCell(parent, inliningDef, parents, InliningResultsDictionary());
                 if (res)
+                    for j = 1 : i
+                        parents.returnParent();
+                    end
                     outputBool = true;
+                    return;
                 end
             end
             for i = 1 : size
