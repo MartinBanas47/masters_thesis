@@ -6,7 +6,7 @@ for f = 1:length(jsonList)
     parsedInliningJson = jsonList{f}.inlining;
     for i = 1:length(parsedInliningJson)
         [cell, parentDepth] = parseUseCase(parsedInliningJson(i).object,[]);
-        inliningDictionary(parsedInliningJson(i).name) = InlinedUseCase(parsedInliningJson(i).name, cell, parentDepth);
+        inliningDictionary(parsedInliningJson(i).name) = InliningDefinition(parsedInliningJson(i).name, cell, parentDepth);
     end
 end
 end

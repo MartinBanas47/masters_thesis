@@ -1,4 +1,5 @@
 classdef ParentsList < handle & BaseParentList & matlab.mixin.Copyable
+    %ParentsList - A class to represent a list of parents.
     properties
         List,
         MaxDepth,
@@ -9,12 +10,15 @@ classdef ParentsList < handle & BaseParentList & matlab.mixin.Copyable
     
     methods
         function obj = ParentsList(maxDepth)
+            %ParentsList - Constructs an instance of the ParentsList class.
+            %
+            %   Input Arguments:
+            %       - maxDepth: The maximum number of parents to store.
             obj.List = zeros(1, maxDepth);
             obj.MaxDepth = maxDepth;
         end
         
         function addParent(obj, value)
-            %ADDPARENT Adds block to a list of parents
             if (obj.MaxDepth == 0)
                 return;
             elseif(obj.CurrentEnd == 0 && obj.IsEmpty)
@@ -32,13 +36,10 @@ classdef ParentsList < handle & BaseParentList & matlab.mixin.Copyable
         end
         
         function outputArg = nextParentAvailable(obj)
-            %NEXTPARENTAVAILABLE Returns if there is next parent available to pick
             outputArg = ~obj.IsEmpty;
         end
         
         function outputArg = getNextParent(obj)
-            %GETNEXTPARENT Provides next parent from the list and sets it as removed
-            %   Behaviour when NextParentAvailable returns false is undefined
             outputArg = obj.List(obj.CurrentEnd);
             if (obj.CurrentEnd == obj.CurrentStart)
                 obj.IsEmpty = true;
@@ -47,9 +48,6 @@ classdef ParentsList < handle & BaseParentList & matlab.mixin.Copyable
         end
         
         function returnParent(obj)
-            %RETURNPARENT Returns lastly taken parent from to list back to the list
-            %   Behavior when returning more parents than removed is undefined
-            %   Behavior when adding parents before returning all the removed parents is undefined
             obj.CurrentEnd = obj.GetNextIndex(obj.CurrentEnd);
             obj.IsEmpty = false;
         end

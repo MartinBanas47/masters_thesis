@@ -1,16 +1,21 @@
 classdef AnyParentCell < BaseCell
-    %PARENTCELL Node cell which uses link to parent of the Simulink block which will be evaluated instead of the current block
+    % AnyParentCell - A class to represent a cell that checks whether any predecessor satisfies a condition.
     
     properties
         Id
     end
-
+    
     properties (Access = private)
         Cell
     end
     
     methods
         function obj = AnyParentCell(id,cell)
+            % AnyParentCell - Constructs an instance of the AnyParentCell class.
+            %
+            %   Input Arguments:
+            %       - id: The unique identifier of the cell.
+            %       - cell: The cell to evaluate.
             obj.Id = id;
             obj.Cell = cell;
         end

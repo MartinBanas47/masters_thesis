@@ -1,6 +1,5 @@
 classdef NumericComparer < BaseComparer
-    %NUMERICCOMPARER Summary of this class goes here
-    %   Detailed explanation goes here
+    % NumericComparer - A class for comparing numeric values using different operations.
     
     properties (Access = private)
         Operation,
@@ -9,15 +8,14 @@ classdef NumericComparer < BaseComparer
     
     methods
         function obj = NumericComparer(operation, expectedValue)
-            %NUMERICCOMPARER Construct an instance of this class
-            %   Detailed explanation goes here
+            % NumericComparer - Constructor method for NumericComparer class.
+            %   obj = NumericComparer(operation, expectedValue) creates an instance of NumericComparer class.
+            %   operation - The operation to be used for comparison.
             obj.Operation = obj.getNumericOperation(operation);
             obj.ExpectedValue = expectedValue;
         end
         
         function result = compare(obj,value)
-            %METHOD1 Summary of this method goes here
-            %   Detailed explanation goes here
             result = obj.Operation(value, obj.ExpectedValue);
         end
     end

@@ -1,6 +1,5 @@
 classdef ConfigFileRun < handle
-    %CONFIGCLASS Summary of this class goes here
-    %   Detailed explanation goes here
+    %ConfigFileRun - A class to represent a configuration file run.
     
     properties
         Inlining,
@@ -12,8 +11,13 @@ classdef ConfigFileRun < handle
     
     methods
         function obj = ConfigFileRun(useCases, inlining, simulinkModel, maxParentDepth)
-            %CONFIGCLASS Construct an instance of this class
-            %   Detailed explanation goes here
+            %ConfigFileRun - Constructs an instance of the ConfigFileRun class.
+            %
+            %   Input Arguments:
+            %       - useCases: The use cases to evaluate.
+            %       - inlining: The inlining definitions.
+            %       - simulinkModel: The Simulink model to evaluate.
+            %       - maxParentDepth: The maximum number of nested parent cells.
             obj.SimulinkModel = simulinkModel;
             obj.UseCases = useCases;
             obj.Inlining = inlining;

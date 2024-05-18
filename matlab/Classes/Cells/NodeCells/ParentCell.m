@@ -1,16 +1,21 @@
 classdef ParentCell < BaseCell
-    %PARENTCELL Node cell which uses link to parent of the Simulink block which will be evaluated instead of the current block
+    %ParentCell - A class to represent a cell that checks whether a parent satisfies a condition.
     
     properties
         Id
     end
-
+    
     properties (Access = private)
         Cell
     end
     
     methods
         function obj = ParentCell(id,cell)
+            %ParentCell - Constructs an instance of the ParentCell class.
+            %
+            %   Input Arguments:
+            %       - id: The unique identifier of the cell.
+            %       - cell: The cell to evaluate.
             obj.Id = id;
             obj.Cell = cell;
         end

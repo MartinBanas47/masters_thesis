@@ -1,6 +1,5 @@
 classdef JsonConfigurationFileParser
-    %JSONCONFIGURATIONFILEPARSER Summary of this class goes here
-    %   Detailed explanation goes here
+    %JsonConfigurationFileParser - A class to parse JSON configuration files.
     
     properties
         FolderPath
@@ -8,8 +7,9 @@ classdef JsonConfigurationFileParser
     
     methods
         function obj = JsonConfigurationFileParser(folderPath)
-            %JSONCONFIGURATIONFILEPARSER Construct an instance of this class
-            %   Detailed explanation goes here
+            %JsonConfigurationFileParser - Constructor method for JsonConfigurationFileParser class.
+            %   obj = JsonConfigurationFileParser(folderPath) creates an instance of JsonConfigurationFileParser class.
+            %   folderPath - The path to the folder containing the JSON configuration files.
             obj.FolderPath = folderPath;
         end
         

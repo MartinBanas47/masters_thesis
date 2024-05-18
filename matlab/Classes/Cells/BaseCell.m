@@ -1,17 +1,19 @@
 classdef (Abstract) BaseCell
-    %BASECELL Abstract class included all mandatory parts of cells
-
+    %BaseCell Abstract class included all mandatory parts of cells
+    
     properties (Abstract)
         %Id is an unique identifier to specify the cells in Configuration file
         Id
     end
-
+    
     methods (Abstract)
-        %EVALUATECELL Method used to evaluate value of given block
-        %   BLOCK Simulink block on which use case will be evaluated
-        %   INLININGDEF ConfigFileRun object of given run
-        %   PARENTS ParentsList object which provides information about parents of the Simulink block
-        %   INLININGRESULT Collection of inlining results for inlining evaluation optimization
+        %evaluateCell is an abstract method to evaluate the cell
+        %
+        %   Input Arguments:
+        %       - block: The block to evaluate.
+        %       - inliningDef: The inlining definitions.
+        %       - parents: The parents of the block.
+        %       - inliningResults: The inlining results.
         outputBool = evaluateCell(obj, block, inliningDef, parents, inliningResults)
     end
 end

@@ -1,6 +1,5 @@
 classdef AndCell < BaseCell
-    %ANDCELL Node cell which connects all provided cells with logical AND
-    %   Lazy evaluation is applied
+    %AndCell - A class to represent a cell that performs logical AND operation on multiple cells.
     
     properties
         Id
@@ -12,6 +11,11 @@ classdef AndCell < BaseCell
     
     methods
         function obj = AndCell(id,cellsArray)
+            %AndCell - Constructs an instance of the AndCell class.
+            %
+            %   Input Arguments:
+            %       - id: The unique identifier of the cell.
+            %       - cellsArray: The array of cells to perform logical AND operation on.
             obj.Id = id;
             obj.CellsArray = cellsArray;
         end

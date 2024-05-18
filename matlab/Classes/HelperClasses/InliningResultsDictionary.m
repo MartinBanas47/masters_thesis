@@ -1,5 +1,5 @@
 classdef InliningResultsDictionary < handle
-    %INLININGRESULTSDICTIONARY Stores evaluation of inlinings for given block to prevent duplicate evaluations
+    %inliningResultsDictionary - A class to represent a dictionary of inlining results on a block.
     properties
         Dictionary
     end
@@ -19,14 +19,14 @@ classdef InliningResultsDictionary < handle
                 obj.Dictionary(key)= value;
             end
         end
-
+        
         function outputArg = IsKey(obj, key)
             outputArg = false;
             if (isConfigured(obj.Dictionary))
                 outputArg = isKey(obj.Dictionary, key);
             end
         end
-
+        
         function outputaArg = Get(obj,key)
             outputaArg = obj.Dictionary(key);
         end

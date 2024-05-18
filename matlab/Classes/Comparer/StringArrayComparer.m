@@ -18,22 +18,12 @@ classdef StringArrayComparer < BaseComparer
         end
         
         function result = compare(obj,value)
-            % compare - Compares the given value with the expected value using the specified operation.
-            %   result = compare(obj,value) compares the given value with the expected value using the specified operation.
-            %   value - The value to be compared.
-            %   result - The result of the comparison.
-            
             result = obj.Operation(value, obj.ExpectedValue);
         end
     end
     
     methods (Access = private)
         function result = getArrayOperation(obj, operation)
-            % getArrayOperation - Returns the array operation based on the specified operation string.
-            %   result = getArrayOperation(obj, operation) returns the array operation based on the specified operation string.
-            %   operation - The operation string.
-            %   result - The array operation.
-            
             switch(operation)
                 case("in")
                     result = @(value, expectedValue) ismember(value, expectedValue);
