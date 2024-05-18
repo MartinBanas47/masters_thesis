@@ -1,5 +1,5 @@
-classdef JsonUseCasesParser
-    %JSONUSECASESPARSER Summary of this class goes here
+classdef JsonConfigurationFileParser
+    %JSONCONFIGURATIONFILEPARSER Summary of this class goes here
     %   Detailed explanation goes here
     
     properties
@@ -7,13 +7,13 @@ classdef JsonUseCasesParser
     end
     
     methods
-        function obj = JsonUseCasesParser(folderPath)
-            %JSONUSECASESPARSER Construct an instance of this class
+        function obj = JsonConfigurationFileParser(folderPath)
+            %JSONCONFIGURATIONFILEPARSER Construct an instance of this class
             %   Detailed explanation goes here
             obj.FolderPath = folderPath;
         end
         
-        function [useCases, inlining, maxParentDepth] = ParseConfigs(obj)
+        function [useCases, inlining, maxParentDepth] = parseConfigs(obj)
             
             if ~isfolder(obj.FolderPath)
                 errorMessage = sprintf('Error: The following folder does not exist:\n%s', folderPath);

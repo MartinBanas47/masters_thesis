@@ -10,15 +10,13 @@ classdef JsonUseCasesOutputPrinterTest < matlab.unittest.TestCase
             useCasesResults.useCase1 = struct('result', 'success');
             useCasesResults.useCase2 = struct('result', 'failure');
             
-            % Create JsonUseCasesOutputPrinter object
-            printer = JsonUseCasesOutputPrinter(useCasesResults);
             
             % Define expected file path and content
             expectedFilePath = 'output.json';
             expectedContent = '{"useCase1":{"result":"success"},"useCase2":{"result":"failure"}}';
             
             % Call the printToFile method
-            printer.printToFile(expectedFilePath);
+            JsonUseCasesOutputPrinter.printToFile(useCasesResults,expectedFilePath);
             
             % Verify that the file was created and contains the expected content
             actualContent = fileread(expectedFilePath);
@@ -36,11 +34,9 @@ classdef JsonUseCasesOutputPrinterTest < matlab.unittest.TestCase
             useCasesResults.useCase1 = struct('result', 'success');
             useCasesResults.useCase2 = struct('result', 'failure');
             
-            % Create JsonUseCasesOutputPrinter object
-            printer = JsonUseCasesOutputPrinter(useCasesResults);
             
             % Capture the output of the printToConsole method
-            consoleOutput = evalc('printer.printToConsole()');
+            consoleOutput = evalc('JsonUseCasesOutputPrinter.printToConsole(useCasesResults)');
             
             % Define the expected console output
             expectedOutput = '{"useCase1":{"result":"success"},"useCase2":{"result":"failure"}}';

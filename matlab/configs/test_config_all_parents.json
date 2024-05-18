@@ -92,7 +92,7 @@
                 },
                 {
                     "id": "not_numeric_constant_parents",
-                    "type": "allParentCell",
+                    "type": "anyParentCell",
                     "cell": {
                         "id": "not_numeric_constant_parent_and",
                         "type": "andCell",

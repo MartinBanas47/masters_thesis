@@ -1,7 +1,7 @@
-classdef NegationCellTest < matlab.unittest.TestCase
+classdef ParentCellTest < matlab.unittest.TestCase
     
     methods (Test)
-        function testAttibuteCell(testCase)
+        function testParentCell(testCase)
             model = load_system('ParentTest');
             filePath = mfilename('fullpath');
             folderPath = fileparts(filePath) + "\configs";
@@ -10,7 +10,7 @@ classdef NegationCellTest < matlab.unittest.TestCase
             config = ConfigFileRun(useCases, inlining, model, maxParentDepth);
             config.evalUseCasesOnModel();
             testCase.verifyEqual(length(config.Output), 1);
-            testCase.assertEqual(config.Output{1}.UseCaseId, 'NegationCellTestTrue');
+            testCase.assertEqual(config.Output{1}.UseCaseId, 'parentCellTestTrue');
         end
     end
     
