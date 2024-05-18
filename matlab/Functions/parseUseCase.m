@@ -1,4 +1,5 @@
 function [cell, parentDepth] = parseUseCase(json, inlining)
+try
 switch json.type
     case 'attributeCell'
         parentDepth = 0;
@@ -30,30 +31,24 @@ switch json.type
     otherwise
         error('Unsupported cell type')
 end
+catch
+    error("Error while parsing use case: " + json.id + ", Error: " + lasterr)
+end
 end
 
 
 %%refactor
 function [resultAndCell, maxParentDepth] = parseAndCell(id, list, inlining)
-resultCellArray = cell(1, length(list));  % Initialize a cell array
-maxParentDepth = 0;
-if isstruct(list)
-    useCases = num2cell(list);
-else
-    useCases = list;
-end
-for i = 1:length(useCases)
-    [resultCellArray{i}, tmpDepth] = parseUseCase(useCases{i}, inlining);
-    if (tmpDepth >= 0 && maxParentDepth >= 0)
-        maxParentDepth = max(tmpDepth, maxParentDepth);
-    else
-        maxParentDepth = min(tmpDepth, maxParentDepth);
-    end
-end
-resultAndCell = AndCell(id,resultCellArray);
+[resultCellArray, maxParentDepth] = parseCellsArray(list, inlining);
+resultAndCell = AndCell(id, resultCellArray);
 end
 
 function [resultAndCell, maxParentDepth] = parseOrCell(id, list, inlining)
+[resultCellArray, maxParentDepth] = parseCellsArray(list, inlining);
+resultAndCell = OrCell(id, resultCellArray);
+end
+
+function [resultCellArray, maxParentDepth] = parseCellsArray(list, inlining)
 resultCellArray = cell(1, length(list));  % Initialize a cell array
 maxParentDepth = 0;
 if isstruct(list)
@@ -69,5 +64,4 @@ for i = 1:length(useCases)
         maxParentDepth = min(tmpDepth, maxParentDepth);
     end
 end
-resultAndCell = OrCell(id,resultCellArray);
 end

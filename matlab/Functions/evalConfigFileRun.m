@@ -36,10 +36,14 @@ end
 function evalUseCasesOnBlock(block,configFileRun, parents)
 inliningResultsDictionary = InliningResultsDictionary();
 for i = 1:numel(configFileRun.UseCases)
-    result = configFileRun.UseCases{i}.evaluateCell(block, configFileRun.Inlining, parents, inliningResultsDictionary);
-    if (result)
+    try
+        result = configFileRun.UseCases{i}.evaluateCell(block, configFileRun.Inlining, parents, inliningResultsDictionary);
+        if (result)
         structToInput = struct("BlockName", getfullname(block), "UseCaseId",configFileRun.UseCases{i}.Id);
         configFileRun.Output{end+1} = structToInput;
+        end
+    catch
+        error("Error in use case: " + configFileRun.UseCases{i}.Id + ", in block: " + getfullname(block)+ ", Error: " + lasterr);
     end
 end
 end
