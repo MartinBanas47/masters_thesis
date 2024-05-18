@@ -1,4 +1,5 @@
 classdef AttributeTypeCell < BaseCell
+    % AttributeTypeCell - A class to represent a cell that compares value of block parameter type with expected value.
     
     properties
         Id
@@ -11,6 +12,12 @@ classdef AttributeTypeCell < BaseCell
     
     methods
         function obj = AttributeTypeCell(id,attributeName, expectedType)
+            % AttributeTypeCell - Constructs an instance of the AttributeTypeCell class.
+            %
+            %   Input Arguments:
+            %       - id: The unique identifier of the cell.
+            %       - attributeName: The name of the attribute to evaluate.
+            %       - expectedType: The expected type for the attribute.
             obj.Id = id;
             obj.AttributeName = attributeName;
             obj.ExpectedAttributeType = expectedType;

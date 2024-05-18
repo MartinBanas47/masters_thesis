@@ -1,5 +1,5 @@
 classdef InliningCell < BaseCell
-    %INLININGCELL Node cell which uses link to predefined inlining which will be evaluated instead of the cell
+    % InliningCell - A class to represent a cell that inlines a predefined structure.
     
     properties
         Id
@@ -11,14 +11,16 @@ classdef InliningCell < BaseCell
     
     methods
         function obj = InliningCell(id, referenceName)
-            %INLININGCELL Construct an instance of this class
-            %   REFERENCENAME Name of reference to predefined subtree
+            % InliningCell - Constructs an instance of the InliningCell class.
+            %
+            %   Input Arguments:
+            %       - id: The unique identifier of the cell.
+            %       - referenceName: The name of the predefined structure to inline.
             obj.Id = id;
             obj.ReferenceName = referenceName;
         end
         
         function outputBool  = evaluateCell(obj,block, inliningDef, parents, inliningResults)
-            %METHOD1 Evaluation of the predefined structure which is returned as a result of this cell
             if (inliningResults.IsKey(obj.ReferenceName))
                 outputBool  = inliningResults.Get(obj.ReferenceName);
             else

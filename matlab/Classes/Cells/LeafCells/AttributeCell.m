@@ -1,18 +1,28 @@
 classdef AttributeCell < BaseCell
+    % AttributeCell - A class to represent a cell that comapres value of block parameter with expected value.
     
     properties
         Id
     end
     
     properties (Access = private)
-        AttributeName,
+        AttributeName
         OperationHelper
     end
     
     methods
-        function obj = AttributeCell(id,attributeName, expectedValue, operation)
+        function obj = AttributeCell(id, attributeName, expectedValue, operation)
+            % AttributeCell - Constructs an instance of the AttributeCell class.
+            %
+            %   Input Arguments:
+            %       - id: The unique identifier of the cell.
+            %       - attributeName: The name of the attribute to evaluate.
+            %       - expectedValue: The expected value for the attribute.
+            %       - operation: The comparison operation to perform.
+            
             obj.Id = id;
             obj.AttributeName = attributeName;
+            
             if isnumeric(expectedValue) && isscalar(expectedValue)
                 % Input is a single number
                 obj.OperationHelper = NumericComparer(operation, expectedValue);
@@ -30,7 +40,7 @@ classdef AttributeCell < BaseCell
             end
         end
         
-        function r = evaluateCell(obj,block, inliningDef,parents, inliningResults)
+        function r = evaluateCell(obj, block, inliningDef, parents, inliningResults)
             if (isprop(block, obj.AttributeName))
                 param = get_param(block, obj.AttributeName);
                 r = obj.OperationHelper.compare(param);
