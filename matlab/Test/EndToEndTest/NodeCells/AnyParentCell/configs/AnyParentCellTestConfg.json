@@ -1,0 +1,29 @@
+{
+    "inlining": [],
+    "useCases": [
+        {
+            "id": "any_parent_cell_test",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "any_parent_cell_test_ty",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Outport"
+                },
+                {
+                    "id": "any_parent_cell_test",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "any_parent_cell_test_ty",
+                        "type": "attributeCell",
+                        "attributeName": "Name",
+                        "operation": "==",
+                        "expectedValue": "Subsystem1"
+                    }
+                }
+            ]
+        }
+    ]
+}

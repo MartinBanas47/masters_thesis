@@ -14,7 +14,7 @@ for i = 2:numel(system)
     evalUseCasesOnBlock(system(i), configFileRun, parents);
     blockType = get_param(system(i), 'BlockType');
     if (strcmp(blockType, "SubSystem"))
-        evalSubSystemRecursive(configFileRun, find_system(system(i), 'SearchDepth', 1, 'LookUnderMasks', 'all',  'FollowLinks', 'on','Type', 'Block'), parents);
+        evalSubSystemRecursive(configFileRun, find_system(system(i), 'SearchDepth', 1, 'LookUnderMasks', 'all',  'FollowLinks', 'on','Type', 'Block'), copy(parents));
     end
 end
 result = true;

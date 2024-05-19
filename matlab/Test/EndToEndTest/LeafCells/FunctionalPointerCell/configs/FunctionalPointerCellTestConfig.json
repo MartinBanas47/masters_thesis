@@ -1,0 +1,14 @@
+{
+    "inlining": [],
+    "useCases": [
+        {
+            "id": "functional_pointer_cell_test",
+            "type": "functionalPointerCell",
+            "functionName": "isequal",
+            "arguments": [
+                1,
+                1
+            ]
+        }
+    ]
+}

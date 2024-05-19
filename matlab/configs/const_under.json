@@ -23,17 +23,11 @@
                     "id": "const_under_parent",
                     "type": "parentCell",
                     "cell": {
-                        "id": "const_under_parent",
-                        "type": "andCell",
-                        "cells": [
-                            {
-                                "id": "const_under_parent_check_sub",
-                                "type": "attributeCell",
-                                "attributeName": "BlockType",
-                                "operation": "==",
-                                "expectedValue": "SubSystem"
-                            }
-                        ]
+                        "id": "const_under_parent_check_sub",
+                        "type": "attributeCell",
+                        "attributeName": "BlockType",
+                        "operation": "==",
+                        "expectedValue": "SubSystem"
                     }
                 }
             ]

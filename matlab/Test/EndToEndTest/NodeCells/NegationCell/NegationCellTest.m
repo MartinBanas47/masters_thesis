@@ -2,7 +2,7 @@ classdef NegationCellTest < matlab.unittest.TestCase
     
     methods (Test)
         function testAttibuteCell(testCase)
-            model = load_system('ParentTest');
+            model = load_system('TestModel');
             filePath = mfilename('fullpath');
             folderPath = fileparts(filePath) + "\configs";
             parser = JsonConfigurationFileParser(folderPath);

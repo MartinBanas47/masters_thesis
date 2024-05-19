@@ -5,9 +5,9 @@ addpath(genpath('configs'));
 addpath(genpath('Functions'));
 addpath(genpath('Test'));
 
-model = load_system('ParentTest');
-t1 = datetime;
+model = load_system('TestModel');
 folderPath = "configs";
+t1 = datetime;
 parser = JsonConfigurationFileParser(folderPath);
 [useCases, inlining, maxParentDepth] = parser.parseConfigs();
 config = ConfigFileRun(useCases, inlining, model, maxParentDepth);

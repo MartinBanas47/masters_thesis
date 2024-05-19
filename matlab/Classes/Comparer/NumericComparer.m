@@ -24,17 +24,17 @@ classdef NumericComparer < BaseComparer
         function result = getNumericOperation(obj, operation)
             switch(operation)
                 case("==")
-                    result = @(value, expectedValue) value == expectedValue;
+                    result = @(value, expectedValue) isequal(value, expectedValue);
                 case(">")
-                    result = @(value, expectedValue) value > expectedValue;
+                    result = @(value, expectedValue) isnumeric(value) && value > expectedValue;
                 case("<")
-                    result = @(value, expectedValue) value < expectedValue;
+                    result = @(value, expectedValue) isnumeric(value) && value < expectedValue;
                 case(">=")
-                    result = @(value, expectedValue) value >= expectedValue;
+                    result = @(value, expectedValue) isnumeric(value) && value >= expectedValue;
                 case("<=")
-                    result = @(value, expectedValue) value <= expectedValue;
+                    result = @(value, expectedValue) isnumeric(value) && value <= expectedValue;
                 case("~=")
-                    result = @(value, expectedValue) value ~= expectedValue;
+                    result = @(value, expectedValue) ~isequal(value, expectedValue);
             end
         end
     end
