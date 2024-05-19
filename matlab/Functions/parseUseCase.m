@@ -30,6 +30,10 @@ switch json.type
     otherwise
         error('Unsupported cell type')
 end
+global memHitCnt;
+global memMaxVal;
+
+[memHitCnt, memMaxVal] = tryMemoryScan(memHitCnt, memMaxVal);
 end
 
 
