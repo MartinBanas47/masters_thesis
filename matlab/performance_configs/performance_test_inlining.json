@@ -81,14 +81,46 @@
         {
             "name": "NotNumericConstant_inlining",
             "object": {
-                "id": "NotNumericConstant",
-                "type": "anyParentCell",
-                "cell": {
-                    "id": "NotNumericConstantTypeValue",
-                    "type": "attributeTypeCell",
-                    "attributeName": "Value",
-                    "expectedType": "char"
-                }
+                "id": "not_numeric_constant",
+                "type": "andCell",
+                "cells": [
+                    {
+                        "id": "not_numeric_constant_const",
+                        "type": "attributeCell",
+                        "attributeName": "BlockType",
+                        "operation": "==",
+                        "expectedValue": "Constant"
+                    },
+                    {
+                        "id": "not_numeric_constant_val",
+                        "type": "attributeTypeCell",
+                        "attributeName": "Value",
+                        "expectedType": "char"
+                    },
+                    {
+                        "id": "not_numeric_constant_parents",
+                        "type": "anyParentCell",
+                        "cell": {
+                            "id": "not_numeric_constant_parent_and",
+                            "type": "andCell",
+                            "cells": [
+                                {
+                                    "id": "not_numeric_constant_parent_sub",
+                                    "type": "attributeCell",
+                                    "attributeName": "BlockType",
+                                    "operation": "==",
+                                    "expectedValue": "SubSystem"
+                                },
+                                {
+                                    "id": "not_numeric_constant_val",
+                                    "type": "attributeTypeCell",
+                                    "attributeName": "Value",
+                                    "expectedType": "number"
+                                }
+                            ]
+                        }
+                    }
+                ]
             }
         }
     ],
@@ -5749,134 +5781,88 @@
             "referenceName": "NotNumericConstant_inlining"
         },
         {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "type": "inliningCell",
-            "id": "NotNumericConstant_inlining",
-            "referenceName": "NotNumericConstant_inlining"
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "type": "inliningCell",
-            "id": "NotNumericConstant_inlining",
-            "referenceName": "NotNumericConstant_inlining"
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "type": "inliningCell",
-            "id": "NotNumericConstant_inlining",
-            "referenceName": "NotNumericConstant_inlining"
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "type": "inliningCell",
-            "id": "NotNumericConstant_inlining",
-            "referenceName": "NotNumericConstant_inlining"
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         {
             "type": "inliningCell",
@@ -5884,159 +5870,130 @@
             "referenceName": "NotNumericConstant_inlining"
         },
         {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "type": "inliningCell",
-            "id": "NotNumericConstant_inlining",
-            "referenceName": "NotNumericConstant_inlining"
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "type": "inliningCell",
-            "id": "NotNumericConstant_inlining",
-            "referenceName": "NotNumericConstant_inlining"
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "type": "inliningCell",
-            "id": "NotNumericConstant_inlining",
-            "referenceName": "NotNumericConstant_inlining"
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         {
             "type": "inliningCell",
@@ -6044,34 +6001,1005 @@
             "referenceName": "NotNumericConstant_inlining"
         },
         {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
+            "type": "inliningCell",
+            "id": "NotNumericConstant_inlining",
+            "referenceName": "NotNumericConstant_inlining"
         },
         {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "inliningCell",
+            "id": "NotNumericConstant_inlining",
+            "referenceName": "NotNumericConstant_inlining"
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "inliningCell",
+            "id": "NotNumericConstant_inlining",
+            "referenceName": "NotNumericConstant_inlining"
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "inliningCell",
+            "id": "NotNumericConstant_inlining",
+            "referenceName": "NotNumericConstant_inlining"
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "inliningCell",
+            "id": "NotNumericConstant_inlining",
+            "referenceName": "NotNumericConstant_inlining"
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "inliningCell",
+            "id": "NotNumericConstant_inlining",
+            "referenceName": "NotNumericConstant_inlining"
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "inliningCell",
+            "id": "NotNumericConstant_inlining",
+            "referenceName": "NotNumericConstant_inlining"
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         {
             "type": "inliningCell",
@@ -6084,144 +7012,130 @@
             "referenceName": "NotNumericConstant_inlining"
         },
         {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "type": "inliningCell",
-            "id": "NotNumericConstant_inlining",
-            "referenceName": "NotNumericConstant_inlining"
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "type": "inliningCell",
-            "id": "NotNumericConstant_inlining",
-            "referenceName": "NotNumericConstant_inlining"
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "type": "inliningCell",
-            "id": "NotNumericConstant_inlining",
-            "referenceName": "NotNumericConstant_inlining"
-        },
-        {
-            "type": "inliningCell",
-            "id": "NotNumericConstant_inlining",
-            "referenceName": "NotNumericConstant_inlining"
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "type": "inliningCell",
-            "id": "NotNumericConstant_inlining",
-            "referenceName": "NotNumericConstant_inlining"
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "type": "inliningCell",
-            "id": "NotNumericConstant_inlining",
-            "referenceName": "NotNumericConstant_inlining"
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         {
             "type": "inliningCell",
@@ -6229,49 +7143,46 @@
             "referenceName": "NotNumericConstant_inlining"
         },
         {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "type": "inliningCell",
-            "id": "NotNumericConstant_inlining",
-            "referenceName": "NotNumericConstant_inlining"
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         {
             "type": "inliningCell",
@@ -6279,64 +7190,46 @@
             "referenceName": "NotNumericConstant_inlining"
         },
         {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         {
             "type": "inliningCell",
@@ -6344,94 +7237,135 @@
             "referenceName": "NotNumericConstant_inlining"
         },
         {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
+            "type": "inliningCell",
+            "id": "NotNumericConstant_inlining",
+            "referenceName": "NotNumericConstant_inlining"
         },
         {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         {
             "type": "inliningCell",
@@ -6439,104 +7373,88 @@
             "referenceName": "NotNumericConstant_inlining"
         },
         {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         {
             "type": "inliningCell",
@@ -6544,64 +7462,46 @@
             "referenceName": "NotNumericConstant_inlining"
         },
         {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
-        },
-        {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         {
             "type": "inliningCell",
@@ -6609,14 +7509,1546 @@
             "referenceName": "NotNumericConstant_inlining"
         },
         {
-            "id": "NotNumericConstant",
-            "type": "anyParentCell",
-            "cell": {
-                "id": "NotNumericConstantTypeValue",
-                "type": "attributeTypeCell",
-                "attributeName": "Value",
-                "expectedType": "char"
-            }
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "inliningCell",
+            "id": "NotNumericConstant_inlining",
+            "referenceName": "NotNumericConstant_inlining"
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "inliningCell",
+            "id": "NotNumericConstant_inlining",
+            "referenceName": "NotNumericConstant_inlining"
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "inliningCell",
+            "id": "NotNumericConstant_inlining",
+            "referenceName": "NotNumericConstant_inlining"
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "inliningCell",
+            "id": "NotNumericConstant_inlining",
+            "referenceName": "NotNumericConstant_inlining"
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "inliningCell",
+            "id": "NotNumericConstant_inlining",
+            "referenceName": "NotNumericConstant_inlining"
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "inliningCell",
+            "id": "NotNumericConstant_inlining",
+            "referenceName": "NotNumericConstant_inlining"
+        },
+        {
+            "id": "not_numeric_constant",
+            "type": "andCell",
+            "cells": [
+                {
+                    "id": "not_numeric_constant_const",
+                    "type": "attributeCell",
+                    "attributeName": "BlockType",
+                    "operation": "==",
+                    "expectedValue": "Constant"
+                },
+                {
+                    "id": "not_numeric_constant_val",
+                    "type": "attributeTypeCell",
+                    "attributeName": "Value",
+                    "expectedType": "char"
+                },
+                {
+                    "id": "not_numeric_constant_parents",
+                    "type": "anyParentCell",
+                    "cell": {
+                        "id": "not_numeric_constant_parent_and",
+                        "type": "andCell",
+                        "cells": [
+                            {
+                                "id": "not_numeric_constant_parent_sub",
+                                "type": "attributeCell",
+                                "attributeName": "BlockType",
+                                "operation": "==",
+                                "expectedValue": "SubSystem"
+                            },
+                            {
+                                "id": "not_numeric_constant_val",
+                                "type": "attributeTypeCell",
+                                "attributeName": "Value",
+                                "expectedType": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     ]
 }
