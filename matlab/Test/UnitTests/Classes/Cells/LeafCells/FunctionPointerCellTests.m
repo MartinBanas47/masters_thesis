@@ -1,17 +1,17 @@
-classdef FunctionalPointerCellTests < matlab.unittest.TestCase
+classdef FunctionPointerCellTests < matlab.unittest.TestCase
     
     methods (Test)
         
         function testEvaluateCellWithNumbes(testCase)
             % Test evaluating the cell with numbers
-            cell = FunctionalPointerCell('Id', 'isequal', jsondecode("[2, 3]"));
+            cell = FunctionPointerCell('Id', 'isequal', jsondecode("[2, 3]"));
             expectedOutput = false;
             
             output = cell.evaluateCell([], [], [], []);
             
             testCase.verifyEqual(output, expectedOutput);
             
-            cell = FunctionalPointerCell('Id', 'isequal', jsondecode("[2, 2]"));
+            cell = FunctionPointerCell('Id', 'isequal', jsondecode("[2, 2]"));
             expectedOutput = true;
             
             output = cell.evaluateCell([], [], [], []);
@@ -21,14 +21,14 @@ classdef FunctionalPointerCellTests < matlab.unittest.TestCase
         
         function testEvaluateCellWithStrings(testCase)
             % Test evaluating the cell with string arguments
-            cell = FunctionalPointerCell("Id", 'isequal', jsondecode('["Hello", " World!"]'));
+            cell = FunctionPointerCell("Id", 'isequal', jsondecode('["Hello", " World!"]'));
             expectedOutput = false;
             
             output = cell.evaluateCell([], [], [], []);
             
             testCase.verifyEqual(output, expectedOutput);
             
-            cell = FunctionalPointerCell("Id", 'isequal', jsondecode('["Hello","Hello"]'));
+            cell = FunctionPointerCell("Id", 'isequal', jsondecode('["Hello","Hello"]'));
             expectedOutput = true;
             
             output = cell.evaluateCell([], [], [], []);
@@ -38,7 +38,7 @@ classdef FunctionalPointerCellTests < matlab.unittest.TestCase
         
         function testEvaluateCellWithNumbersAndStrings(testCase)
             % Test evaluating the cell with a combination of numbers and strings
-            cell = FunctionalPointerCell('Id', 'isequal', jsondecode('[5, "5"]'));
+            cell = FunctionPointerCell('Id', 'isequal', jsondecode('[5, "5"]'));
             expectedOutput = false;
             
             output = cell.evaluateCell([], [], [], []);

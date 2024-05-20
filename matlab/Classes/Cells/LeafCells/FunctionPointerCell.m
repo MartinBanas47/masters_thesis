@@ -1,5 +1,5 @@
-classdef FunctionalPointerCell < BaseCell
-    % FunctionalPointerCell - A class to represent a cell that calls a function with arguments.
+classdef FunctionPointerCell < BaseCell
+    % FunctionPointerCell - A class to represent a cell that calls a function with arguments.
     properties
         Id
     end
@@ -10,8 +10,8 @@ classdef FunctionalPointerCell < BaseCell
     end
     
     methods
-        function obj = FunctionalPointerCell(id, functionName, arguments)
-            % FunctionalPointerCell - Constructs an instance of the FunctionalPointerCell class.
+        function obj = FunctionPointerCell(id, functionName, arguments)
+            % FunctionPointerCell - Constructs an instance of the FunctionPointerCell class.
             %
             %   Input Arguments:
             %       - id: The unique identifier of the cell.

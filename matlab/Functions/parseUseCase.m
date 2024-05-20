@@ -22,9 +22,9 @@ try
         case 'inliningCell'
             parentDepth = inlining(json.referenceName).ParentDepth;
             cell = InliningCell(json.id,json.referenceName);
-        case 'functionalPointerCell'
+        case 'functionPointerCell'
             parentDepth = 0;
-            cell = FunctionalPointerCell(json.id, json.functionName, json.arguments);
+            cell = FunctionPointerCell(json.id, json.functionName, json.arguments);
         case 'attributeTypeCell'
             parentDepth = 0;
             cell = AttributeTypeCell(json.id,json.attributeName,json.expectedType);

@@ -3,7 +3,7 @@
     "useCases": [
         {
             "id": "functional_pointer_cell_test",
-            "type": "functionalPointerCell",
+            "type": "functionPointerCell",
             "functionName": "isequal",
             "arguments": [
                 1,

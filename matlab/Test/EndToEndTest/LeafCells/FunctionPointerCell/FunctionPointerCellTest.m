@@ -1,4 +1,4 @@
-classdef FunctionalPointerCellTest < matlab.unittest.TestCase
+classdef FunctionPointerCellTest < matlab.unittest.TestCase
     
     methods (Test)
         function testAttributeTypeCell(testCase)
