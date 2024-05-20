@@ -1,5 +1,5 @@
-classdef ParentsList < handle & BaseParentList & matlab.mixin.Copyable
-    %ParentsList - A class to represent a list of parents.
+classdef LimitedParentsList < handle & BaseParentList & matlab.mixin.Copyable
+    %LimitedParentsList - A class to represent a list of parents.
     properties
         List,
         MaxDepth,
@@ -9,8 +9,8 @@ classdef ParentsList < handle & BaseParentList & matlab.mixin.Copyable
     end
     
     methods
-        function obj = ParentsList(maxDepth)
-            %ParentsList - Constructs an instance of the ParentsList class.
+        function obj = LimitedParentsList(maxDepth)
+            %LimitedParentsList - Constructs an instance of the LimitedParentsList class.
             %
             %   Input Arguments:
             %       - maxDepth: The maximum number of parents to store.

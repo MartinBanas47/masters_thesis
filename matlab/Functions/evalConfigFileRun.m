@@ -3,7 +3,7 @@ system = find_system(configFileRun.SimulinkModel, 'SearchDepth', 1, 'LookUnderMa
 if (configFileRun.ParentDepth < 0)
     parentsList = AllParentsList();
 else
-    parentsList = ParentsList(configFileRun.ParentDepth);
+    parentsList = LimitedParentsList(configFileRun.ParentDepth);
 end
 evalSystem(configFileRun, system, parentsList);
 end
@@ -39,8 +39,8 @@ for i = 1:numel(configFileRun.UseCases)
     try
         result = configFileRun.UseCases{i}.evaluateCell(block, configFileRun.Inlining, parents, inliningResultsDictionary);
         if (result)
-        structToInput = struct("BlockName", getfullname(block), "UseCaseId",configFileRun.UseCases{i}.Id);
-        configFileRun.Output{end+1} = structToInput;
+            structToInput = struct("BlockName", getfullname(block), "UseCaseId",configFileRun.UseCases{i}.Id);
+            configFileRun.Output{end+1} = structToInput;
         end
     catch
         error("Error in use case: " + configFileRun.UseCases{i}.Id + ", in block: " + getfullname(block)+ ", Error: " + lasterr);

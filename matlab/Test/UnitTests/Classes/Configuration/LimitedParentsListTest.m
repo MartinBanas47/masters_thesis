@@ -1,8 +1,8 @@
-classdef ParentsListTest < matlab.unittest.TestCase
+classdef LimitedParentsListTest < matlab.unittest.TestCase
     methods (Test)
         function testAddParent(testCase)
             % Test adding a parent to an empty list
-            parentsList = ParentsList(5);
+            parentsList = LimitedParentsList(5);
             parentsList.addParent(1);
             testCase.verifyEqual(parentsList.List, [1 0 0 0 0]);
             
@@ -13,7 +13,7 @@ classdef ParentsListTest < matlab.unittest.TestCase
         
         function testNextParentAvailable(testCase)
             % Test when there is a next parent available
-            parentsList = ParentsList(5);
+            parentsList = LimitedParentsList(5);
             parentsList.addParent(1);
             testCase.verifyTrue(parentsList.nextParentAvailable());
             
@@ -24,7 +24,7 @@ classdef ParentsListTest < matlab.unittest.TestCase
         
         function testGetNextParent(testCase)
             % Test getting the next parent from the list
-            parentsList = ParentsList(5);
+            parentsList = LimitedParentsList(5);
             parentsList.addParent(1);
             parentsList.addParent(2);
             parentsList.addParent(3);
@@ -42,7 +42,7 @@ classdef ParentsListTest < matlab.unittest.TestCase
         
         function testReturnParent(testCase)
             % Test returning the last taken parent back to the list
-            parentsList = ParentsList(5);
+            parentsList = LimitedParentsList(5);
             parentsList.addParent(1);
             parentsList.addParent(2);
             parentsList.getNextParent();
@@ -58,7 +58,7 @@ classdef ParentsListTest < matlab.unittest.TestCase
         
         function testSize(testCase)
             % Test the size of an empty list
-            parentsList = ParentsList(5);
+            parentsList = LimitedParentsList(5);
             testCase.verifyEqual(parentsList.size(), 0);
             
             % Test the size of a non-empty list
